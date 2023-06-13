@@ -1,0 +1,15 @@
+﻿Welcome to K2Spy!
+
+K2Spy allow K2s internal XML definitions to be viewed, searched and analyzed.
+Furthermore K2Spy includes other features such as (but not limited to):
+- Ability to directly upload forms, views and workflows
+- Ability to perform XPath-search across all XML definitions
+- Ability to extract categories and the contained definitions (forms, views, workflows)
+- Check in/check out management
+- Execution of SmartObject
+- Listing invalid SmartObjects
+
+K2Spy relies heavily on just-in-time caching meaning performance will improve over time.
+If you want to preload the cache, you can do so via the Options-dialog.
+
+K2Spy has been developed by Mathias Gorm Jensen (mathias.jensen@pomio.dk) and is intended as an alternative to K2s own SmartObject Service Tester-tool.

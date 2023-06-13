@@ -1,0 +1,847 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug 5.4</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DD1CBEC-2828-4C5A-B2BE-3FF27CBF2408}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>K2Spy</RootNamespace>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <AssemblyName>K2Spy</AssemblyName>
+  </PropertyGroup>
+  <!--<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\AnyCPU\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;AnyCPU</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\x86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;x86</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;x64</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\AnyCPU\</OutputPath>
+    <DefineConstants>RELEASE;TRACE;AnyCPU</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\x86\</OutputPath>
+    <DefineConstants>RELEASE;TRACE;x86</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\x64\</OutputPath>
+    <DefineConstants>RELEASE;TRACE;x64</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>-->
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 5.4|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug 5.4\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;AnyCPU</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 5.4|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug 5.4\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;x86</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 5.4|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug 5.4\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;x64</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 5.6|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug 5.6\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;AnyCPU</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 5.6|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug 5.6\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;x86</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 5.6|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug 5.6\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;x64</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 5.3|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug 5.3\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;AnyCPU</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 5.3|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug 5.3\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;x86</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 5.3|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug 5.3\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;x64</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug 5.3' Or '$(Configuration)' == 'Release 5.3'">
+    <K2Version>5.3</K2Version>
+    <DefineConstants>$(DefineConstants);K2_53</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug 5.4' Or '$(Configuration)' == 'Release 5.4'">
+    <K2Version>5.4</K2Version>
+    <DefineConstants>$(DefineConstants);K2_54</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug 5.5' Or '$(Configuration)' == 'Release 5.6'">
+    <K2Version>5.6</K2Version>
+    <DefineConstants>$(DefineConstants);K2_55;StyleProfile</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug 5.6' Or '$(Configuration)' == 'Release 5.6'">
+    <K2Version>5.6</K2Version>
+    <DefineConstants>$(DefineConstants);K2_56;StyleProfile</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputPath>bin\$(Configuration)\$(Platform)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 5.4|AnyCPU'">
+    <OutputPath>bin\Release 5.4\</OutputPath>
+    <DefineConstants>RELEASE;TRACE;AnyCPU</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 5.4|x86'">
+    <OutputPath>bin\x86\Release 5.4\</OutputPath>
+    <DefineConstants>RELEASE;TRACE;x86</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 5.4|x64'">
+    <OutputPath>bin\x64\Release 5.4\</OutputPath>
+    <DefineConstants>RELEASE;TRACE;x64</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <!--<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>-->
+  <!--<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\x86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>-->
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ScintillaNET, Version=3.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jacobslusser.ScintillaNET.3.6.3\lib\net40\ScintillaNET.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.10.0\lib\net46\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Async, Version=1.5.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.Async.1.5.0\lib\net461\Serilog.Sinks.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Console, Version=4.1.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.Console.4.1.0\lib\net45\Serilog.Sinks.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=5.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.File.5.0.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.Categories.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.Categories.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.Designer.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.Designer.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.Workflow.Authoring.dll, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.Workflow.Authoring.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.Forms.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.Forms.Authoring.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.Forms.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.Forms.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.Forms.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.Forms.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.Forms.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.Forms.Utilities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.Forms.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.HostClientAPI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.HostClientAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.SecurityManagementAPI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.SecurityManagementAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.SmartObjects.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.SmartObjects.Authoring.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.SmartObjects.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.SmartObjects.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.SmartObjects.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.SmartObjects.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.SmartObjects.Services.K2Management">
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.SmartObjects.Services.K2Management.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.SmartObjects.Services.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.SmartObjects.Services.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.SmartObjects.Services.ServiceSDK, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.SmartObjects.Services.ServiceSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.WebDesigner.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.WebDesigner.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.Workflow.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.Workflow.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceCode.Workflow.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\k2-binaries\$(K2Version)\$(Platform)\SourceCode.Workflow.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsyncActionEventArgs.cs" />
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryDataCacheKey.cs" />
+    <Compile Include="CategoryScope.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CategoryScope.Designer.cs">
+      <DependentUpon>CategoryScope.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colors.cs" />
+    <Compile Include="Compatibility\CategoryDataType.cs" />
+    <Compile Include="Compatibility\CategoryDataTypes.cs" />
+    <Compile Include="Compatibility\CompatibilityImplementationException.cs" />
+    <Compile Include="Compatibility\SourceCode.Forms.Authoring\StyleProfile.cs" />
+    <Compile Include="Compatibility\SourceCode.Forms.Management\FormsManagerExtensionMethods.cs" />
+    <Compile Include="Compatibility\SourceCode.Forms.Management\StyleProfileInfo.cs" />
+    <Compile Include="Compatibility\SourceCode.Forms.Management\StyleProfilesExplorer.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="Connections.cs" />
+    <Compile Include="ContextMenuManager.cs" />
+    <Compile Include="ControlVisibilityContext.cs" />
+    <Compile Include="DisableControlContext.cs" />
+    <Compile Include="Disposer.cs" />
+    <Compile Include="EditConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditConnection.Designer.cs">
+      <DependentUpon>EditConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionMethods\AsyncEventHandlerExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\CategoryExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\CategoryManagerExtensionMethods.cs" />
+    <Compile Include="ConnectionFactory.cs" />
+    <Compile Include="ExtensionMethods\ControlExtensionMethods.cs" />
+    <Compile Include="DefinitionPaneExecuter.cs" />
+    <Compile Include="CacheEventArgs.cs" />
+    <Compile Include="ExtensionMethods\ControlTypeInfoExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\DirectoryInfoExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\ExceptionExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\ILoggerExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\ListViewItemExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\MulticastDelegateExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\StringExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\TaskExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\ToolStripExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\XPathDocumentExtensionMethods.cs" />
+    <Compile Include="Fonts.cs" />
+    <Compile Include="Group.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Json.cs" />
+    <Compile Include="ManageConnections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageConnections.Designer.cs">
+      <DependentUpon>ManageConnections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\IAnalyzerContextMenuExtension.cs" />
+    <Compile Include="Model\IAnalyzerContextMenuMenuPriorityExtension.cs" />
+    <Compile Include="Model\IClearDiskCacheExtension.cs" />
+    <Compile Include="Model\ISearcherContextMenuExtension.cs" />
+    <Compile Include="Model\ISearcherContextMenuPriorityExtension.cs" />
+    <Compile Include="Model\ISelectedNodeResetExtension.cs" />
+    <Compile Include="Model\ITreeViewContextMenuPriorityExtension.cs" />
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistantLocalStorageAsyncCache.cs" />
+    <Compile Include="InvokeOnUIThreadActionQueue.cs" />
+    <Compile Include="K2SpyContext.cs" />
+    <Compile Include="ExtensionMethods\K2SpyTreeNodeExtensionMethods.cs" />
+    <Compile Include="K2SpyTreeNodeListViewItem.cs" />
+    <Compile Include="GroupPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="K2SpyTreeViewSearcher.cs" />
+    <Compile Include="LayoutSuspender.cs" />
+    <Compile Include="ExtensionMethods\ListViewExtensionMethods.cs" />
+    <Compile Include="ListViewUpdateContext.cs" />
+    <Compile Include="Model\IAnalyzerPaneExtension.cs" />
+    <Compile Include="Model\ICommandBarExtension.cs" />
+    <Compile Include="Model\ITreeViewContextMenuExtension.cs" />
+    <Compile Include="Model\IDefinitionPaneExtension.cs" />
+    <Compile Include="Model\IDelayedSelectedNodeChangedExtension.cs" />
+    <Compile Include="Model\IExtensionPriority.cs" />
+    <Compile Include="Model\IgnoreExtensionAttribute.cs" />
+    <Compile Include="Model\IInitializedExtension.cs" />
+    <Compile Include="Model\IInternalExtension.cs" />
+    <Compile Include="Model\ISearchPaneExtension.cs" />
+    <Compile Include="Model\ISelectedNodeChangedExtension.cs" />
+    <Compile Include="Model\IToolsMenuExtension.cs" />
+    <Compile Include="Extensions\Analyzer\AnalyzerOptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\Analyzer\AnalyzerOptionsControl.Designer.cs">
+      <DependentUpon>AnalyzerOptionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Analyzer\UsedSmartMethodInformation.cs" />
+    <Compile Include="Extensions\Analyzer\UsedSmartPropertyInformation.cs" />
+    <Compile Include="Extensions\Analyzer\UsesInformationCache.cs" />
+    <Compile Include="Extensions\Analyzer\UsesInformation.cs" />
+    <Compile Include="Extensions\Bookmarks\Bookmarks.cs" />
+    <Compile Include="Extensions\CacheOptions\CacheOptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\CacheOptions\CacheOptionsControl.Designer.cs">
+      <DependentUpon>CacheOptionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\CacheOptions\CacheOptionsExtension.cs" />
+    <Compile Include="Extensions\CacheOptions\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions\CacheOptions\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExternalServiceInstanceResources\ExternalServiceInstanceResourcesExtension.cs" />
+    <Compile Include="Extensions\ExternalServiceInstanceResources\ExternalServiceInstanceResourcesOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\ExternalServiceInstanceResources\ExternalServiceInstanceResourcesOptions.Designer.cs">
+      <DependentUpon>ExternalServiceInstanceResourcesOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExternalServiceInstanceResources\ViewExternalServiceInstanceResources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions\ExternalServiceInstanceResources\ViewExternalServiceInstanceResources.Designer.cs">
+      <DependentUpon>ViewExternalServiceInstanceResources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExternalServiceInstanceResources\ViewExternalServiceInstanceResources+MatchData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions\RefreshTreeNode\RefreshTreeNodeExtension.cs" />
+    <Compile Include="ReportProgressDelegate.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="StopWatch.cs" />
+    <Compile Include="Extensions\Analyzer\TreeViewAnalyzer+ExpandAsync.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\Analyzer\TreeViewAnalyzer+IAnalysisCompletedTreeNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\Analyzer\TreeViewAnalyzer+AnalyzerTreeNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\Analyzer\TreeViewAnalyzer+SearchingTreeNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\Analyzer\TreeViewAnalyzer+ServiceInstanceSmartObjectsTreeNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\Analyzer\TreeViewAnalyzer+UsedByTreeNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\Analyzer\TreeViewAnalyzer+UsesTreeNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\Analyzer\TreeViewAnalyzer+AsyncExpander.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\Analyzer\TreeViewAnalyzer+IAnalyzeTreeNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\ExecuteSmartObject\AutoResizeTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extensions\ExecuteSmartObject\InputProperty.cs" />
+    <Compile Include="Extensions\InvalidSmartObjects\InvalidSmartObjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions\InvalidSmartObjects\InvalidSmartObjects.Designer.cs">
+      <DependentUpon>InvalidSmartObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\InvalidSmartObjects\InvalidSmartObjectsExtension.cs" />
+    <Compile Include="Extensions\TreeNodeStateMemory\TreeNodeState.cs" />
+    <Compile Include="Extensions\Upload\UploadExtension.cs" />
+    <Compile Include="ListViewSortableVirtualList.cs" />
+    <Compile Include="Extensions\XPathSearcher\XPathSearcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions\XPathSearcher\XPathSearcher.Designer.cs">
+      <DependentUpon>XPathSearcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\XPathSearcher\XPathSearcher+SearchResultItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions\XPathSearcher\XPathSearcherExtension.cs" />
+    <Compile Include="ProgressBarLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgressBarLabel.Designer.cs">
+      <DependentUpon>ProgressBarLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCategory.Designer.cs">
+      <DependentUpon>SelectCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileNameAndTimestamp.cs" />
+    <Compile Include="Trier.cs" />
+    <Compile Include="WaitCursorContext.cs" />
+    <Compile Include="WorkingOverlay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingOverlay.Designer.cs">
+      <DependentUpon>WorkingOverlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaddedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PaneHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaneHeader.Designer.cs">
+      <DependentUpon>PaneHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Analyzer\AnalyzerExtension.cs" />
+    <Compile Include="Extensions\Bookmarks\BookmarksExtension.cs" />
+    <Compile Include="Extensions\Bookmarks\ManageBookmarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions\Bookmarks\ManageBookmarks.Designer.cs">
+      <DependentUpon>ManageBookmarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\CheckInCheckOutManager\CheckInCheckOutManagerExtension.cs" />
+    <Compile Include="Extensions\ConfigureServiceInstance\ConfigureServiceInstanceExtension.cs" />
+    <Compile Include="Extensions\DefinitionPane\TextFormat.cs" />
+    <Compile Include="Extensions\ExecuteSmartObject\AdoQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions\ExecuteSmartObject\AdoQuery.Designer.cs">
+      <DependentUpon>AdoQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExecuteSmartObject\EditHyperlink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions\ExecuteSmartObject\EditHyperlink.Designer.cs">
+      <DependentUpon>EditHyperlink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExecuteSmartObject\EditText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions\ExecuteSmartObject\EditText.Designer.cs">
+      <DependentUpon>EditText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExecuteSmartObject\ExecuteSmartObject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions\ExecuteSmartObject\ExecuteSmartObject.Designer.cs">
+      <DependentUpon>ExecuteSmartObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExecuteSmartObject\AdoQueryData.cs" />
+    <Compile Include="Extensions\ExecuteSmartObject\ExecuteSmartObjectData.cs" />
+    <Compile Include="Extensions\ExecuteSmartObject\ExecuteSmartObjectExtension.cs" />
+    <Compile Include="Extensions\ExecuteSmartObject\HyperlinkObject.cs" />
+    <Compile Include="Extensions\ExecuteSmartObject\ImageObject.cs" />
+    <Compile Include="Extensions\ExecuteSmartObject\FileObject.cs" />
+    <Compile Include="Extensions\ExtractCategory\ExtractCategoryExtension.cs" />
+    <Compile Include="Extensions\GoToDefinition\GoToDefinitionExtension.cs" />
+    <Compile Include="Extensions\NavigationHistory\NavigationHistoryExtension.cs" />
+    <Compile Include="Extensions\RefreshServiceInstance\RefreshServiceInstanceExtension.cs" />
+    <Compile Include="Extensions\ServiceInstanceDetailsPane\ServiceInstanceDetailsPaneExtension.cs" />
+    <Compile Include="Extensions\ShowInCategory\ShowInCategoryExtension.cs" />
+    <Compile Include="Extensions\PreloadDefinitions\PreloadDefinitionsExtension.cs" />
+    <Compile Include="Extensions\Searcher\SearcherExtension.cs" />
+    <Compile Include="Extensions\TreeNodeStateMemory\TreeNodeStateMemoryExtension.cs" />
+    <Compile Include="ExtensionMethods\ScintillaStyleExtensionMethods.cs" />
+    <Compile Include="InmemoryAsyncCache.cs" />
+    <Compile Include="PreloadedInmemoryAsyncCache.cs" />
+    <Compile Include="K2SpyTreeNode.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\IExtension.cs" />
+    <Compile Include="Extensions\DefinitionPane\DefinitionPaneExtension.cs" />
+    <Compile Include="Extensions\DefinitionPane\DefinitionPaneControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\DefinitionPane\DefinitionPaneControl.Designer.cs">
+      <DependentUpon>DefinitionPaneControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExtensionsManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cache.cs" />
+    <Compile Include="ExtensionMethods\ToolStripItemCollectionExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\ToolStripItemExtensionMethods.cs" />
+    <Compile Include="ToolStripSpringTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtensionMethods\TreeNodeCollectionExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\TreeNodeExtensionMethods.cs" />
+    <Compile Include="TreeNodePredicates.cs" />
+    <Compile Include="Extensions\Analyzer\TreeViewAnalyzer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\Analyzer\TreeViewAnalyzer.Designer.cs">
+      <DependentUpon>TreeViewAnalyzer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Searcher\TreeViewSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extensions\Searcher\TreeViewSearch.Designer.cs">
+      <DependentUpon>TreeViewSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionMethods\TreeViewExtensionMethods.cs" />
+    <Compile Include="TreeViewSearchSettings.cs" />
+    <Compile Include="TreeViewUpdateContext.cs" />
+    <Compile Include="Utils\HotKeyManager.cs" />
+    <Compile Include="Utils\SearchManager.cs" />
+    <Compile Include="ExtensionMethods\WithExtensionMethods.cs" />
+    <Compile Include="Xml.cs" />
+    <EmbeddedResource Include="CategoryScope.resx">
+      <DependentUpon>CategoryScope.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditConnection.resx">
+      <DependentUpon>EditConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageConnections.resx">
+      <DependentUpon>ManageConnections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\Analyzer\AnalyzerOptionsControl.resx">
+      <DependentUpon>AnalyzerOptionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\CacheOptions\CacheOptionsControl.resx">
+      <DependentUpon>CacheOptionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\CacheOptions\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\ExternalServiceInstanceResources\ExternalServiceInstanceResourcesOptions.resx">
+      <DependentUpon>ExternalServiceInstanceResourcesOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\ExternalServiceInstanceResources\ViewExternalServiceInstanceResources.resx">
+      <DependentUpon>ViewExternalServiceInstanceResources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\InvalidSmartObjects\InvalidSmartObjects.resx">
+      <DependentUpon>InvalidSmartObjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\XPathSearcher\XPathSearcher.resx">
+      <DependentUpon>XPathSearcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBarLabel.resx">
+      <DependentUpon>ProgressBarLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectCategory.resx">
+      <DependentUpon>SelectCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingOverlay.resx">
+      <DependentUpon>WorkingOverlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaneHeader.resx">
+      <DependentUpon>PaneHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\Bookmarks\ManageBookmarks.resx">
+      <DependentUpon>ManageBookmarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\DefinitionPane\DefinitionPaneControl.resx">
+      <DependentUpon>DefinitionPaneControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\ExecuteSmartObject\AdoQuery.resx">
+      <DependentUpon>AdoQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\ExecuteSmartObject\EditHyperlink.resx">
+      <DependentUpon>EditHyperlink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\ExecuteSmartObject\EditText.resx">
+      <DependentUpon>EditText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\ExecuteSmartObject\ExecuteSmartObject.resx">
+      <DependentUpon>ExecuteSmartObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Extensions\Analyzer\TreeViewAnalyzer.resx">
+      <DependentUpon>TreeViewAnalyzer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\Searcher\TreeViewSearch.resx">
+      <DependentUpon>TreeViewSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="licenses.txt" />
+    <Content Include="welcome.txt" />
+    <None Include="Resources\Stop_16x.png" />
+    <None Include="Resources\Settings16.png" />
+    <None Include="Resources\Help16.png" />
+    <None Include="Resources\RefreshWL_Dark16.png" />
+    <None Include="Resources\Refresh16.png" />
+    <None Include="Resources\Search16.png" />
+    <None Include="Resources\Save16.png" />
+    <None Include="Resources\Load16.png" />
+    <None Include="Resources\Loaded16.png" />
+    <None Include="Resources\OpenForm16.png" />
+    <None Include="Resources\ExecuteSmartObject16.png" />
+    <None Include="Resources\ClearIcon16.png" />
+    <None Include="Resources\Run_blue_16x.png" />
+    <None Include="Resources\transparent_16.png" />
+    <None Include="Resources\Loading_16x.png" />
+    <None Include="Resources\ProcessVersion16.png" />
+    <None Include="Resources\processfolder.png" />
+    <None Include="Resources\workflowserver.png" />
+    <None Include="Resources\servicetype.png" />
+    <None Include="Resources\servicetypesroot.png" />
+    <None Include="Resources\smartobjectsroot.png" />
+    <None Include="Resources\FolderClosed16.png" />
+    <None Include="Resources\API16.png" />
+    <None Include="Resources\RootItem16.png" />
+    <None Include="Resources\forms.png" />
+    <None Include="Resources\views.png" />
+    <None Include="Resources\Method16.png" />
+    <None Include="Resources\Properties16.png" />
+    <None Include="Resources\View_CheckOut16.png" />
+    <None Include="Resources\Form_CheckOut16.png" />
+    <None Include="Resources\ProcessDefinition_Locked16.png" />
+    <None Include="Resources\Unlock_16x.png" />
+    <None Include="Resources\Bookmark_16x.png" />
+    <None Include="Resources\BookmarkMainMenuItem_16x.png" />
+    <None Include="Resources\Close_8x_8x.png" />
+    <None Include="Resources\Close_white_12x_12x_v5_mousedown.png" />
+    <None Include="Resources\Close_white_12x_12x_v5_hover_v2.png" />
+    <None Include="Resources\Close_white_12x_12x_v5.png" />
+    <None Include="Resources\transparent_12.png" />
+    <None Include="Resources\CheckOut16.png" />
+    <None Include="Resources\CheckIn16.png" />
+    <None Include="Resources\CancelCheckOut16.png" />
+    <Content Include="about.txt" />
+    <Content Include="changelog.txt" />
+    <None Include="Resources\CollapseAll_16x.png" />
+    <Content Include="Resources\Controls16.png" />
+    <None Include="Resources\ControlsRoot.png" />
+    <None Include="Resources\GoToReference_16x.png" />
+    <None Include="Resources\Remove_color_16x.png" />
+    <None Include="Resources\Error16.png" />
+    <None Include="Resources\XMLIntelliSenseDescendant_16x.png" />
+    <None Include="Resources\XMLIntelliSenseDescendant_16x.ico" />
+    <None Include="Resources\SelectObject_16x.png" />
+    <None Include="Resources\QueryView_16x.png" />
+    <None Include="Resources\StatusInvalidOutline_16x.png" />
+    <None Include="Resources\UploadPackage_16x.png" />
+    <None Include="Resources\UploadFile_16x.png" />
+    <None Include="Resources\ResourceSymbols_16x.png" />
+    <None Include="Resources\StyleProfile16.png" />
+    <None Include="Resources\StyleProfile_CheckOut16.png" />
+    <None Include="Resources\Refresh_16x.png" />
+    <Content Include="Resources\StyleProfileRoot.png" />
+    <None Include="Resources\VBSearch_16x.png" />
+    <Content Include="todo.txt" />
+    <None Include="Resources\Forward_16x.png" />
+    <None Include="Resources\Backwards_16x.png" />
+    <None Include="Resources\ServiceInstance16.png" />
+    <None Include="Resources\Workflow16.png" />
+    <None Include="Resources\SmartObject16.png" />
+    <None Include="Resources\View16.png" />
+    <None Include="Resources\Form16.png" />
+    <None Include="Resources\XMLDocumentTypeDefinitionFile_16x.png" />
+    <None Include="Resources\TreeView_16x.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

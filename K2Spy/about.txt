@@ -1,0 +1,1 @@
+﻿K2Spy has been developed by Mathias Gorm Jensen (mathiasgormjensen@gmail.com) and is intended as an alternative for K2s own SmartObject Service Tester-tool.

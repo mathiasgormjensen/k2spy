@@ -1,0 +1,149 @@
+﻿## 
+Properly implement things such welcome.txt and changelog.txt
+Implement CanRefresh and related methods in StyleProfile-implementations
+Update-feature which should probably be based on pomio.dk
+
+## Questions and considerations
+Consider exposing steps/tasks/client event when analyzing a workflow. HOW WILL/SHOULD THIS IMPACT USAGE ANALYSIS? FOR INSTANCE SHOULD WE BE ABLE TO ANALYZE WHICH SMARTOBJECTS A TASK/STEP/CLIENTENEVET USES AND VICE VERSA?
+Consider adding support for CTRL+TAB with nice overlay-UI where the user can select between tree, search, definition and analyzer?
+Consider handling natural shortcuts when searching such as ENTER or F3 which currently does nothing!
+Consider if relevant: SmartObjects should appear in the left tree below their parent service instance
+Consider handling initialization errors in a better way, for instance when connection.xml contains invalid data
+Consider adding to Azure DevOps to allow automatic builds etc
+
+## LOW PRIORITY
+Ability to start/stop workflows similar to the workflow terminator
+General cleanup where unused fields, methods etc are removed, and where things are property grouped in regions
+Remove/implement all TODOs
+Can we list Forms/Views/Workflows that are invalid/inconsistent - SEEMS COMPLICATED AS K2s OWN VALIDATION IS DONE IN JAVASCRIPT OR IN THEIR DEPLOYMENT-CODE
+Consider moving definition-search into separate window instead of current overlay - HOW WILL THIS WORK IF MULTIPLE DEFINITIONS PANES AT OPEN AT ONCE???
+Ability to narrow down search to specific types (by name) and not just specific definition types
+Documentationgenerator similar to the one created for CBS. Should probably run in a separate AppDomain so that we can release memory 
+Handle the case where something like a SmartObject is added to a category which is then refreshed. The SmartObject is then missing from the SmartObjectsRoot and ActAs therefore doesn't work
+Add something like BaseURL to connection string feature, so that we can allow forms and views to be opened directly from K2Spy
+
+Split files such as K2SpyTreeNode into separate files
+Mark relevant classes as internal
+
+
+## DOING
+[doing] Error handling related to extensive use of await
+[doing] Add Serilog-based logging - PLEASE NOTE serilog did not seem to log anything on LSB-computer!
+[doing] fix issues in Analyzer where doubleclick sometimes result in node being collapsed/expanded
+
+
+## NOT RELEVANT
+[not relevant as multiple definition tabs are now supported] Ability to inject custom definition control which may for instance be used to show status/outcome of ExtractCategoryExtension. May also be relevant for objects that have multiple definition-like objects
+[doing] Configure service instance
+[not relevant] consolidate ClonedCacheExtension and PreloadDefinitionsExtension
+[not very relevant] where used analysis of parameters or is it handled implicitly by properties?
+[not relevant due to UsesInformation] Split AnalyzerTreeNode into separate specific classes for easier maintenance and so we can handle SmartMethods and SmartProperties both when they are shown in the tree on the left and when they are not in the tree
+[not relevant] Open Welcome, Licenses, About etc in separate tab if possible
+[no] Consider always starting at the Welcome-page?
+[not relevant as cache is prepopulated by ServiceObjectsRootTreeNodeulated] Cache service types using InmemoryPreloadedAsyncCache
+[yes it is, otherwise we cannot raise the Refreshed and Evicted events on the CategoryDataTreeNode] Is it really necessary for CategoryDataTreeNode to listen to Refreshed-events on both the cache and the related node? Coulnd't we just listen to the related node?
+
+## DONE
+[done] Back/Forward for treeview selection - should we move this into a plugin?
+[done] tree-state (collapsed vs expanded) memory for use when refreshing
+[done] Fix treeview icons so they look pretty
+[done] Context-menu for going from Form/View/SmartObject definition to category and vice-versa
+[done] Consider sorting matches in both analysis-results and search-results
+[done] Sorter for ListView columns
+[done] Refresh service instance?
+[done] Extract data plugin
+[done (using XML comments)] Some kind of details pane where you can see when for instance a form was created, modified etc
+[done] General loading overlay
+[done] Custom tab control with ability to close tabs
+[done] GoTo/Bookmark plugin
+[done] # Execute SmartObject plugin
+[done]	- Save definition
+[done]	- Open definition
+[done]	- Data-type specific controls (DateTime, File, Image, Hyperlink)
+[done]	- ADO query
+[done]	- Ability to download/save files and images
+[done] Check-in/check-out management
+[done] We need to pass K2SpyContext around throughout and stop using Session.Current etc
+[done] Move history stuff (back/forward) into separate plugin
+[done] Extension-type that adds to the horizontal toolbar [possibly an internal extension-type]
+[done] Eliminate use of IInitializedExtension where possible and relevant
+[done] Ability to refresh categories, SmartObjects etc (refreshing the cache)
+[done] Assembly resolver
+[done] List invalid SmartObjects plugin
+[done] Show warning somewhere/somehow on first run/when no connections are available
+[done] Ability to upload/override forms and views, possibly also workflows?
+[done] K2Spy page on pomio.dk
+[done] Context-menu in Analyzer pane and Search pane?
+[done] Ability to switch between environments
+[done] XPath searcer extension
+[done - it works!] How does definition search work when you switch to a different file?
+[done] Controls root tree node and where used
+[done] Where used analysis plugin
+[done]		- Does Where used work properly with workflows? - NOPE, WILL REQUIRE THAT WE DO THE INSPECTION USING XPATH AT SOME LEVEL AS WORKFLOWS ARE REPRESENTED BY THE PROCESS FULL NAME RATHER THAN A GUID
+[done]		- Proper analyzer that works on the XML rather than regex
+[done]		- Consider enabling where used on SmartObject methods and properties - SHOULD BE EASIER NOW THAT WE HAVE XPATH-SUPPORT
+[done] Consider allowing users to narrow down the XPath search of XPath searcher to a specific category
+[done] [duplicate] add ability to scope both XPath searches and regular searches to a specific category
+[done] Add support automatic caching to disk of definitions, as we should be able to determine whether we need to read from disk or from K2 based on LWT of things such as forms, views and SmartObjects
+[done] Close analyzer etc when (re-)connecting
+[done] Add a Disconnect button and determine how much is disposed/removed from memory as we currently seem to be leaking memory :S
+[done] What should we do with orphans such as the one in the K2Spy category?
+[done] What should we do when the name specified in CategoryData does not match the mapped data?
+[done] Consider adding Known issues to Help
+[done] ability to save and load cache from disk to speed up development
+[done] Remove plugins/extensions we know will never get used
+[UsesInformation is now publicly available] Consider moving the analysis stuff into methods that can be used outside the analyzer plugin, so that the data can be used in other plugin such as a documentation plugin
+[done] Allow various dialogs to be minimized and possibly appear with a proper icon
+[done] Extend Analyzer/UsesInformation to support ListView-methods which seems to be implicitly bound to the related SmartObject
+[done] Add support for back-button when selected node is null, so that you can easily get back to where you were, alternatively maybe we should open a separate tab?
+[done] Consider adding some event that allows cloned/referenced nodes (such as those in Search and Analyzer) to get notified when the icon of their source is changed, maybe we should just have an ImageIndex changed-event?
+[done] Consider collapsing items being analyzed when they are refreshed
+[done] Make sure that icons are updated correctly in Search- and Analysis-panes when checking in or checking out items
+[done] Certain SmartObjects cannot be executed, don't remember any examples though
+[done] implement options dialog - should for instance allow extensions that use caching to be cleared, and should also allow current settings in app.config to be editable
+[done] Add various precompilation symbols so that we know whether we have been compiled for Debug or Release, and whether we've been compiled to AnyCPU, x86 or x64
+[done] Remove "scintilla1" as default text in scintilla editor
+[done] Cache service type XML definitions
+[done] Add Definition to Service types
+[done] Plugin that lists endpoint assembly locations, SOAP URLs etc
+[done] !IMPORTANT! Fix connection issue that occurs when K2 windows service is restarted while K2Spy is open. Maybe we shouldn't cache the connections?
+[done] Cache raw XML-definitions too, and use these when extracting
+[done] create Model.IOptionsExtension interface that allows extensions to appear in the Options dialog
+[done] Change throw new Exception("!")-exceptions to something meaningfull
+[done] Build and package for various versions of K2 - WHAT ABOUT VERSION OF DEPENDENCIES?
+[done] Create something like Model.IPreloadableExtension that allows other extensions to participate in preloads. When preloading we should show two progress bars; one with the overall progress and one with the current extensions progress
+[done] Consider adding support for modern features such as style profiles and workflow steps? - how can we make this compatible with older versions of K2? Compilation symbols?
+[done - caused by disposing of K2SpyTreeNodes] MainForms seems to be closing quite slowly? Possibly related to Serilog?
+[done] Remove obsolete methods from MAinForm such as PopulateWorkflowServerAsync
+
+
+[done] CAche logic:
+[done] - Change event to Refreshed
+[done] - when refreshing a category evict all children
+[done] - once the category has been refreshed, fire refreshed events for all children
+[done] Extend NavigationHistoryExtension to support the case where nodes no longer exist. When that happens we should probably keep going back or forward until we find a match
+[done] When searching, move status text to progressLabel at the bottom of the window. Keep the progress-bar in the Searcher-control
+[done] Consider preloading more cachable data rather than injecting it from various K2SpyTreeNode implementations
+[done] PERFORMANCE IMPROVEMENTS AT STARTUP!!!
+[done] Fix Searcher and possible Analyzer. Probably related to the signature change of PerformSearchAsync
+[done] Preload workflow stuff. Maybe we should just show the workflows as a flat list rather than in a hierarchy, which will make things appear more consistent
+[done] Consider allowing XPath searching in other things than just categories, hence allow for instance service instances to be searched
+[done] Change SmartMethodTreeNode and SmartPropertyTreeNode to return their specific part of the SmartObject-definition
+[done] Eliminate flickering when opening/expanding Uses and Used By nodes
+[done] Context-menu in Invalid SmartObjects
+[done] Consider adding support for some degree of TreeNodes that can be expanded/populated/initialized when the parent is expanded. 
+	[done] This could eliminate the need for ITreeInitialized.TreeInitializedAsync, but would also require the nodes are selected using some method that is able to await nodes being expanded. 
+	[done] How will this affect K2SpyTreeNodeClone?
+	[we should really stop using icon overrides] How will it affect Check-in/Check-out management and icon overrides?
+[no longer relevant] Consider not applying things such as ITreeInitialized.TreeInitializedAsync until the parent node is expanded to optimize performance
+[done] Venstre piltast virker ikke i Analyzer
+[done] Refresh-option in context menu
+[done] Make ContextMenus appear when using the dedicated keyboard-shortcut
+[done] Preload workflowinfo
+[done] Eliminate use of GetK2SpyContext delegate
+[done] Update CategoryDataTreeNode when related (acting as) node is updated, for instance when checking out/checking in the related node - seems to be a timing issue where the related node is updated after the category data node is being refreshed
+[done] Make all relevant K2SpyTreeNode-implementations support CanRefresh=true
+[done] Update K2SpyTreeNode-refresh implementations so that base.Text, this.SetImageKey etc are updated if necessary
+[done] Refactor/rename Plugins to Extensions?
+[done] Improve performance of "Locating candicates" in K2SpyTreeViewSearcher.PerformSearchAsync which is currently slowing things down too much
+[done - hackish] Fix SearchManager so that it is able to do proper reverse search and start from the bottom when relevant
